@@ -7,7 +7,7 @@ Ex 2:
      Input = 100
      Output = 1
 
-Pseudocode:
+Algorithm:
 
 1. Input number from user and initialize result = 0
 2. While number is not equal to zero
@@ -16,6 +16,26 @@ Pseudocode:
    2.3 Remove the last digit from number using / operator
 3. Return result
 
+Pseudocode:
+
+Pseudo function reverseInteger(int number)-->result
+     Initialize int originalNum, remainder, result = 0
+     Set originalNum = number
+     while (originalNum != 0) 
+        remainder = originalNum % 10
+        result = (result*10)+remainder
+        originalNum /= 10
+     return result
+
+Pseudo function reverseIntegerTest()
+     Initialize integer number
+     Input number 
+     reverseInteger = reverseInteger(number)
+     print reverseInteger
+
+Pseudo main function()
+     call reverseIntegerTest()
+     
 */
 
 
@@ -42,8 +62,8 @@ void reverseIntegerTest() //user
     int number;
     cout << "Enter a integer: ";
     cin >> number;
-    int reverse = reverseInteger(number);  
-    cout << reverse;
+    int reverseInteger = reverseInteger(number);  
+    cout << reverseInteger;
 }
 
 int main() {
