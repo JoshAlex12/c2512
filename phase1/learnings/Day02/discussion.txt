@@ -1,0 +1,140 @@
+3. To find the square:-
+
+pseudofunction:
+
+findSquare(number -> int) -> int
+	return number * number
+
+findSquareTest() 
+	input number
+	square = findSquare(number)
+	print square
+
+pseudocode:
+
+findSquareTest()
+_______________________________________________
+4. To swap two numbers:-
+pseudofunction:
+function swapNums(&number1,&number2)
+	temp = number1
+	number1 = number2
+	number2 = temp
+	
+function swapNumsTest()
+	input number1,number2
+	swapNums(number1,number2)
+	print number1,number2
+
+pseudocode:
+swapNumsTest()
+----------------------------------
+c++ code:
+#include <iostream>
+using namespace std;
+
+void swapNums(int &num1,int &num2){
+    int temp=num1;
+    num1=num2;
+    num2=temp;
+}
+
+void swapNumsTest(){
+    int num1,num2;
+    cout << "Enter number 1:";
+    cin >> num1;
+    cout << "Enter number 2:";
+    cin >> num2;
+    swapNums(num1,num2);
+    cout << "Number 1:" << num1;
+    cout << "\nNumber 2:" << num2;
+}
+
+
+int main()
+{
+    swapNumsTest();
+
+    return 0;
+}
+_______________________________________________
+
+9. To check whether a number is armstrong or not
+pseudo function:
+
+function isArmstrong(number -> int) -> bool
+	copyNumber = number
+	int counter = 0
+	while copyNumber > 0
+		copyNumber = copyNumber/10
+		counter = counter + 1
+	end while
+	copyNumber = number
+	int sum = 0
+	while copyNumber > 0
+		temp = copyNumber % 10
+		sum = sum + temp^counter
+		copyNumber = copyNumber / 10
+	end while
+	if sum == number
+		return true
+	return false
+
+function isArmstrongTest(){
+	input number
+	bool result = isArmStrong(number)
+	if result == true
+		print "Armstrong"
+	else
+		print "Not Armstrong"
+	end if
+}
+
+pseudocode:
+
+isArmStrongTest()
+----------------------------------
+c++ code:
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+bool swapNums(int number){
+    int copyNumber=number;
+    int counter=0;
+    while (copyNumber>0){
+        copyNumber = copyNumber/10;
+		counter = counter + 1;
+    }
+    copyNumber = number;
+	int sum = 0;
+	while (copyNumber > 0){
+		int temp = copyNumber % 10;
+		sum = sum + (int)pow(temp,counter);
+		copyNumber = copyNumber / 10;
+	}
+	if (sum == number){
+		return true;
+	}
+	return false;
+}
+
+void isArmstrongTest(){
+    int num;
+    cout << "Enter number:";
+    cin >> num;
+    bool result=swapNums(num);
+    if (result ==true){
+        cout << "Armstrong number";
+    }
+    else{
+        cout << "Not Armstrong";
+    }
+}
+
+int main()
+{
+    isArmstrongTest();
+    return 0;
+}
+		
