@@ -11,19 +11,14 @@
         return sum;
     }
 
-    int main(){
-        sumPrimeAge();
-        return 0;
-    }
-
 
 // function minimumAge
 
 
-    int minAge(int [ages], int size) 
+    int minAge(int ages[], int size){
         int min = 0;
 
-        for i = 0;i < (size-1); i++){
+        for (int i = 0; i < (size-1); i++){
             if (ages[i] < min){
                 min = ages[i];
             }
