@@ -5,7 +5,7 @@ pseudo function:
     function sumOfAge(ages -> [int], size -> int) -> int                -> done
     function sumPrimeAge(ages -> [int], size -> int) -> int             -> Nayana
     function isTeenage(age -> int) -> bool                              -> Josh
-    function sumTeenage(ages -> [int], size -> int)                     -> Dhaheen
+    function sumTeenage(ages -> [int], size -> int)                     -> Pitchumani
     function minAge(ages -> [int], size ->int) -> int                   -> Nayana
     function isOddAge(age -> int) -> bool                               -> Josh
     function findSecondMaxAdultAge(ages -> [int], size) -> int          -> Dhaheen
