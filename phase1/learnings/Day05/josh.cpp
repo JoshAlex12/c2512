@@ -15,3 +15,14 @@ bool isTeenage(int age){
         return false;
     }
 }
+
+int sumOfOddAge(int ages[], int size){
+    int sum = 0;
+
+    for(int i = 0; i < size; i++){
+        if (isOddAge(ages[i])){
+            sum = sum + ages[i];
+        }
+    }
+    return sum;
+}
