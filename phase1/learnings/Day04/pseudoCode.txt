@@ -18,13 +18,14 @@ pseudo function:
     function readAges(ages -> [int]) -> int                     ->Pitchumani        -> done
     function findAvg(ages -> [int], size -> int) -> int         ->Pitchumani        -> done
     function isPrime(age -> int) -> bool                        ->Josh
-    function sumOfAge(ages -> [int], size -> int) -> int        ->Josh              -> done
-    function sumPrimeAge(ages -> [int], size -> int) -> int     ->Bhagya
+    function findSumOfAge(ages -> [int], size -> int) -> int        ->Josh              -> done
+    function findSumOfPrime(ages -> [int], size -> int) -> int     ->Bhagya
     function isTeenage(age -> int) -> bool                      ->Bhagya
-    function sumTeenage(ages -> [int], size -> int)             ->Bhagya
-    function minAge(ages -> [int], size ->int) -> int           ->Nayana
+    function findSumOfTeenage(ages -> [int], size -> int)             ->Bhagya
+    function findMinAge(ages -> [int], size ->int) -> int           ->Nayana
     function isOddAge(age -> int) -> bool                       ->Nayana
     function findSecondMaxAdultAge(ages -> [int], size) -> int  ->Dhaheen
+    function sumOfOddAge(ages-> [int], size -> int) -> int      ->Josh
 
     testFunction                                                ->Dhaheen
 
@@ -52,7 +53,7 @@ ______________________________________________Pitchumani________________________
 
     function findAvg(ages-> [int], size-> int) -> int
 
-        int avg = sumOfAge(ages, size)  //review
+        int avg = findSumOfAge(ages, size)  //review
 
         return ((int) avg / 2)
 
@@ -75,7 +76,7 @@ ______________________________________________Josh______________________________
         
         return true
 
-    function sumOfAge(ages-> [int], size-> int) -> int
+    function findSumOfAge(ages-> [int], size-> int) -> int
         int sum = 0
 
         for i in (0..(size-1))
@@ -83,9 +84,20 @@ ______________________________________________Josh______________________________
         end for
 
         return sum
+
+    function sumOfOddAge(ages-> [int], size -> int) -> int
+        int sum = 0
+
+        for i in (0..(size-1))
+            if (isOddAge(ages[i]))
+                sum = sum + ages[i]
+            end if
+        end for
+
+        return sum
 _____________________________________________Bhagya_____________________________________________________
 
-    function sumPrimeAge(ages-> [int], size-> int) -> int
+    function findSumOfPrime(ages-> [int], size-> int) -> int
 
         int sum = 0
 
@@ -107,7 +119,7 @@ _____________________________________________Bhagya_____________________________
         
 
 
-    function sumTeenage(ages -> [int], size -> int)
+    function findSumOfTeenage(ages -> [int], size -> int)
 
         int sum = 0
 
@@ -122,7 +134,7 @@ _____________________________________________Bhagya_____________________________
 
 ______________________________________________Nayana____________________________________________________
 
-    function minAge(ages-> [int], size-> int) -> int
+    function findMinAge(ages-> [int], size-> int) -> int
         min = 0
 
         for i in (0..(size-1))
@@ -184,10 +196,10 @@ ________________________________________________Dhaheen_________________________
         print averageAge
         */
 
-        primeAgeSum = SumPrimeAge(ages, size) 
-        teenSum = sumTeenage(ages, size)
-        minimumAge = minAge(ages, size)
-        oddAgeSum = sumOdd(ages, size)
+        primeAgeSum = findSumOfPrime(ages, size) 
+        teenSum = findSumOfTeenage(ages, size)
+        minimumAge = findMinAge(ages, size)
+        oddAgeSum = sumOfOddAge(ages, size)
         secondMaxAdultAge = findSecondMaxAdultAge(ages, size)
         
         print averageAge
