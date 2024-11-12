@@ -1,3 +1,4 @@
+Part 1:
 Read patients' ages (integer) from keyboard till we read less than zero by using array / collection."   -> done
 Find average age (integer),                                                                             -> done
 prime ages sum(example: 11, prime number age), 
@@ -9,6 +10,9 @@ Check minimum age is also prime age.
 Use coding standards and best practices to write pseudo code and c++ code.
 Plan the task codes to make as reusable functions.
 
+Part 2:
+Implement avg age and min age without using arrays.
+
 
 pseudo function:
     function readAges(ages -> [int]) -> int                     ->Pitchumani        -> done
@@ -17,7 +21,7 @@ pseudo function:
     function sumOfAge(ages -> [int], size -> int) -> int        ->Josh              -> done
     function sumPrimeAge(ages -> [int], size -> int) -> int     ->Bhagya
     function isTeenage(age -> int) -> bool                      ->Bhagya
-    function sumTeenage(ages -> [int], size -> int)              ->Bhagya
+    function sumTeenage(ages -> [int], size -> int)             ->Bhagya
     function minAge(ages -> [int], size ->int) -> int           ->Nayana
     function isOddAge(age -> int) -> bool                       ->Nayana
     function findSecondMaxAdultAge(ages -> [int], size) -> int  ->Dhaheen
