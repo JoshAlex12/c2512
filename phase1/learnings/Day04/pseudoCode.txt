@@ -160,13 +160,13 @@ ________________________________________________Dhaheen_________________________
         int secondMax = 0
 
         for i in (0..(size-1))
-            if (ages[i] > 18 && ages[i] > firstMax)
+            if (ages[i] >= 18 && ages[i] > firstMax)
                 firstMax = ages[i]
             end if
         end for
         
         for i in (0..(size-1))
-            if ((ages[i] > 18) && (ages[i] > secondMax) && (ages[i] < firstMax))
+            if ((ages[i] >= 18) && (ages[i] > secondMax) && (ages[i] < firstMax))
                 secondMax = ages[i]
             end if
         end for	
