@@ -1,27 +1,25 @@
 //  isPrime()
-bool isPrime(int age)
-{
-        if (age < 2)
+bool isPrime(int age){
+    if (age < 2)
+    {
+        return false;
+    }
+
+    int squareRoot = sqrt(age); // <cmath>
+
+    for (int i = 0; i <= squareRoot; i++)
+    {
+        if ((age % i) == 0)
         {
             return false;
         }
-
-        int squareRoot = sqrt(age); // <cmath>
-
-        for (int i = 0; i <= squareRoot; i++)
-        {
-            if ((age % i) == 0)
-            {
-                return false;
-            }
-        }
-        
-        return true;
+    }
+    
+    return true;
 }
 
 // findSecondMaxAdult
-int findSecondMaxAdultAge(int ages[], int size)
-{
+int findSecondMaxAdultAge(int ages[], int size){
         int firstMax = 0, secondMax = 0;
 
         for (int i = 0; i < size; i++)
